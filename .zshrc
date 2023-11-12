@@ -116,5 +116,38 @@ source $ZSH/oh-my-zsh.sh
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 alias python=python3
+alias v=nvim
+
+# pnpm
+export PNPM_HOME="/Users/karanjanthe/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+# bun completions
+[ -s "/Users/karanjanthe/.bun/_bun" ] && source "/Users/karanjanthe/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# pg_dump
+export PATH="/Library/PostgreSQL/15/bin:$PATH"
+alias docker="/Applications/Docker.app/Contents/Resources/bin/docker"
+alias cat='bat --style=plain'
