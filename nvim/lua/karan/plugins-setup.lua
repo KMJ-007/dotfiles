@@ -80,6 +80,9 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp-signature-help")
 	use("hrsh7th/cmp-vsnip")
 
+	-- for fuzzy finding and switching between windows and tabs
+	use("junegunn/fzf")
+
 	use({
 		"glepnir/lspsaga.nvim",
 		branch = "main",
@@ -113,6 +116,10 @@ return packer.startup(function(use)
 
 	-- for lazygit
 	use("kdheepak/lazygit.nvim")
+
+	-- for supporting vscode snippets
+	use("hrsh7th/vim-vsnip")
+	use("hrsh7th/vim-vsnip-integ")
 
 	-- for startup screen
 	use({
